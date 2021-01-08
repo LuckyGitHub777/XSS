@@ -1,2 +1,2 @@
 # XSS
-XSS Snippets
+Cross-site scripting snippets
