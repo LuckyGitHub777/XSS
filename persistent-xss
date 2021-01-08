@@ -1,0 +1,1 @@
+>document.body.innerHTML="<style>body{visibility:hidden;}</style><div style=visibility:visible;><h1>H3LL0W0RLD</h1></div>";
