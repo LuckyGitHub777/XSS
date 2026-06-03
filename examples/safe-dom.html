@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Safe DOM Example</title>
+</head>
+<body>
+  <h1>Safe DOM Example</h1>
+
+  <form id="commentForm">
+    <label for="comment">Comment:</label>
+    <input id="comment" name="comment">
+    <button type="submit">Add</button>
+  </form>
+
+  <ul id="comments"></ul>
+
+  <script>
+    // Safe insertion: use textContent so user input is treated as text.
+    document.getElementById("commentForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const input = document.getElementById("comment").value;
+      const item = document.createElement("li");
+
+      item.textContent = input;
+
+      document.getElementById("comments").appendChild(item);
+      document.getElementById("comment").value = "";
+    });
+  </script>
+</body>
+</html>
